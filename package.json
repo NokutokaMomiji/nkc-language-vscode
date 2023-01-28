@@ -1,0 +1,25 @@
+{
+  "name": "nkc",
+  "displayName": "Nokutoka Cutscene",
+  "description": "Syntax and highlighting support for Nokutoka Cutscene.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nkc",
+      "aliases": ["Nokutoka Cutscene", "nkc"],
+      "extensions": [".nkc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nkc",
+      "scopeName": "source.nkc",
+      "path": "./syntaxes/nkc.tmLanguage"
+    }]
+  }
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>nkc</string>
+	</array>
+	<key>name</key>
+	<string>Nokutoka Cutscene</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Keywords</string>
+			<key>match</key>
+			<string>(?&lt;![A-Za-z0-9_])(move|camera|portrait|gamepad|set|create|wait|jump|music|sfx|if|elif|else|endif|player|dialogue|#region|#endregion)(?![A-Za-z0-9_])</string>
+			<key>name</key>
+			<string>keyword.nkc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Functions</string>
+			<key>match</key>
+			<string>(?&lt;![A-Za-z0-9_])(player|camera|tag|resize|follow|offset|shake|save|reset|create|set|destroy|move|shake|color|global|flag|tag|instance|dialogue_end|player_move|time|region|branch|play|stop|loop|group|add|remove|reset|init)(?![A-Za-z0-9_])</string>
+			<key>name</key>
+			<string>support.function.nkc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Constants</string>
+			<key>match</key>
+			<string>(?&lt;![A-Za-z0-9_])(undefined|true|false|all|noone|json|top|\\#|\\$|\\%|\\^^|main_01)(?![A-Za-z0-9_])</string>
+			<key>name</key>
+			<string>constant.language.nkc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Line-comments</string>
+			<key>match</key>
+			<string>//[^\n]*</string>
+			<key>name</key>
+			<string>comment.line.nkc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.mn</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Block-comments</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.nkc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Literal, string, double-quoted</string>
+			<key>match</key>
+			<string>["][^"]*["]</string>
+			<key>name</key>
+			<string>string.quoted.double.nkc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Literal, number</string>
+			<key>match</key>
+			<string>\b[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\b</string>
+			<key>name</key>
+			<string>constant.numeric.nkc</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.nkc</string>
+	<key>uuid</key>
+	<string>7eb40f01-b63d-4115-81c7-069f032bb76a</string>
+</dict>
+</plist>
